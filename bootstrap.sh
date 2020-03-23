@@ -33,7 +33,9 @@ cp -f /vagrant/settings/nginx/sites-available/default /etc/nginx/sites-available
 # Копируем сайт
 cp -f /vagrant/html/selectusers.php /var/www/html/selectusers.php 
 apt install -y mysql-server
-echo 'Выполняем скрипт /vagrant/mydb.sql'
+echo 'Создаем базу mydb и пользователя oleg: /vagrant/mydb.sql'
 mysql </vagrant/mydb.sql
+echo 'Импортируем дамп базы mydb: /vagrant/dump.sql'
+mysql </vagrant/dump.sql
 service php7.2-fpm restart
 service nginx restart
