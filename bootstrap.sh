@@ -36,6 +36,6 @@ apt install -y mysql-server
 echo 'Создаем базу mydb и пользователя oleg: /vagrant/mydb.sql'
 mysql </vagrant/mydb.sql
 echo 'Импортируем дамп базы mydb: /vagrant/dump.sql'
-mysql </vagrant/dump.sql
+mysql mydb </vagrant/dump.sql
 service php7.2-fpm restart
 service nginx restart

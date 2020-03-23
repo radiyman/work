@@ -1,4 +1,5 @@
 CREATE DATABASE IF NOT EXISTS mydb;
+use mydb;
 DROP procedure IF EXISTS MySQL_Test_Proc;
 DELIMITER // ;
 Create Procedure  MySQL_Test_Proc()
